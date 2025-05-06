@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -39,7 +40,7 @@
 
 }
 .header{
-  text-decoration: underline;
+  font-size: 5px;
   color:rgb(32, 116, 243);
 }
 
@@ -61,23 +62,22 @@ nav{
   display: inline-block; /* Make the link behave like a block-level element */
   padding: 10px 20px; /* Add padding to make it look like a button */
   background-color:lightgrey; /* Blue background */
-  color: white; /* White text color */
+  
   text-decoration: none; /* Remove underline from the link */
-  border-radius: 5px; /* Round the corners */
+  border-radius: 20px; /* Round the corners */
   border-color: rgb(142, 243, 159);
   font-size: 16px; /* Font size */
   text-align: center; /* Center the text inside */
-  box-shadow: 0 4px ; /* Add shadow for a 3D effect */
+  /* box-shadow: 0 4px ; Add shadow for a 3D effect */
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
   margin-right: 10px; /* Add right margin to space out the buttons */
 }
 
 /* Hover effect to change background color */
-.links:hover {
-  background: linear-gradient(135deg, #e4e017, #df4c23);
-  box-shadow: 0 6px lightblue; /* More intense shadow */
+/* .links:hover {
+ 
   transform: translateY(-6px);
-}
+} */
 
 /* Optional: Active state for when the link is clicked */
 .links:active {
@@ -101,7 +101,7 @@ nav{
   background: linear-gradient(135deg, #a5bae7, #fad0c4); /* Initial background color (blue) */
   color: rgb(10, 10, 10); /* White text color */
   text-decoration: none; /* Removes underline from the link */
-  border-radius: 15px; /* Rounds the corners */
+  border-radius: 20px; /* Rounds the corners */
   font-size: 16px; /* Font size */
   text-align: center; /* Centers the text inside */
   box-shadow: 0 4px lightgray; /* Adds a shadow for 3D effect */
@@ -109,11 +109,6 @@ nav{
 }
 
 /* Hover effect for the button */
-.button:hover {
-  background: linear-gradient(135deg, #e4e017, #df4c23);
-  box-shadow: 0 6px lightblue; /* More intense shadow when hovered */
-  transform: translateY(-6px); /* Slightly lifts the button when hovered */
-}
 
 /* Optional: Active state for when the link is clicked */
 .button:active {
@@ -196,9 +191,8 @@ nav{
   cursor: pointer;
 }
 
-.newsletter-form button:hover {
- background: linear-gradient(135deg, #e4e017, #df4c23);
-}
+
+
 
 /* Footer Grid */
 .footer-grid {
@@ -413,6 +407,21 @@ nav{
   font-size: 18px;
   margin: 10px 0;
   color:#555;
+}
+.same-height-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.same-height-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.same-height-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 

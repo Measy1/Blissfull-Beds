@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import BedCarousel from "./Carousel";
+
 
 const AddProducts = () => {
   const [product_name, setproductName] = useState("");
@@ -45,7 +45,7 @@ const AddProducts = () => {
     <div>
       <div className="row justify-content-center mt-4">
         <div className="col-md-6 card shadow p-2">
-          <h1>Add Beds</h1>
+          <h1>Add Products</h1>
           {loading}
           {success}
           {error}

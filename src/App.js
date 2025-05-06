@@ -1,27 +1,31 @@
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import './App.css';
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import "./App.css";
 import Signup from "./Components/Signup";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Signin from './Components/Signin';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Signin from "./Components/Signin";
 import NotFound from "./Components/NotFound";
-import AddBeds from './Components/AddBeds';
-import GetBeds from "./Components/GetBeds";
+import AddProducts from "./Components/AddProducts";
+import GetProducts from "./Components/GetProducts";
 import Payment from "./Components/Payment";
 import Carousel from "./Components/Carousel"
-import BedCarousel from './Components/Carousel';
-import Footer from './Components/Footer'
-import Home from './Components/Home'
-import logo from './Components/logo.png'
+import Footer from "./Components/Footer";
+import Home from "./Components/Home";
+import ChatBot from "./Components/ChatBot";
 
-function App(){
+// import logo from './Components/logo.png'
+
+function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <header className="App-header header">
+          <h1>SAFENEST KIDS</h1>
+        </header>
         <div class="col-md-12">
           <nav class="navbar navbar-expand-md navbar-light">
-            <div className="flex items-center">
-              <img src={logo} alt="Logo" className="h-3 w-auto" />
-            </div>
+            {/* <div className="flex items-center">
+              <img src={} alt="Logo" className="h-3 w-auto" />
+            </div> */}
             <button
               class="navbar-toggler"
               data-bs-toggle="collapse"
@@ -38,32 +42,30 @@ function App(){
                   Signin
                 </Link>
 
-                <Link to="/addBeds" className="links">
-                  AddBeds
+                <Link to="/addproducts" className="links">
+                  AddProduct
                 </Link>
-                <Link to="/getBeds" className="links">
-                  GetBeds
+                <Link to="/getproducts" className="links">
+                  GetProducts
                 </Link>
               </div>
             </div>
           </nav>
         </div>
         <div>
-          <h2 className="header">BLISSFUL BEDS</h2>
+          <h2 className="header"></h2>
         </div>
-        <header className="App-header">
-          <h1>BLISSFUL BEDS ONLINE</h1>
-        </header>
         <Routes>
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
-          <Route path="/addbeds" element={<AddBeds />} />
+          <Route path="/addproducts" element={<AddProducts />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/getbeds" element={<GetBeds />} />
+          <Route path="/getproducts" element={<GetProducts />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/carousel" element={<Carousel />} />
           <Route path="/footer" element={<Footer />} />
           <Route path="/" element={<Home />} />
+          <Route path="/chatbot" element={<ChatBot/>}/>
         </Routes>
       </BrowserRouter>
     </div>
